@@ -72,6 +72,31 @@ marquee {
     color: #0F172A;
 }
 
+.btn-color {
+    background: #0F172A;
+    color: azure;
+    border: 0;
+}
+
+.btn-color:hover {
+    background-image: linear-gradient(90deg, #0DC5EE 0%, #7EFDC0 100%);
+    color: #0F172A;
+    border: solid 1px #0F172A;
+}
+
+.social a{
+    color: azure;
+}
+
+.social i{
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.social i:hover {
+    color: #0DC5EE;
+}
+
 .form {
     padding: 20px;
     display: flex;
