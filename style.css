@@ -17,8 +17,12 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #0F172A;
 }
 
+.hd-txt {
+    padding: 140px 10px 100px 150px;
+}
+
 #hd-man {
-    height: 83vh;
+    height: 85vh;
 }
 
 .progress-bar {
@@ -46,9 +50,7 @@ h1, h2, h3, h4, h5, h6, p {
     fill: #272d3c;
 }
 
-.hd-txt {
-    padding: 100px 10px 100px 100px;
-}
+
 
 .scl-txt{
     width: 100%;
