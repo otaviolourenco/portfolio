@@ -3,11 +3,71 @@ const nameimp = document.getElementById('nameimp');
 const email = document.getElementById('email');
 const msg = document.getElementById('msg');
 
-form.addEventListener('change', (e) => {
+//function para validar nome
+nameimp.addEventListener('input', (e) => {
     e.preventDefault();
-    checkInputs();
+    checkNameImp();
 });
 
+function checkNameImp() {
+    const nameimpValue = nameimp.value;
+
+    if (nameimpValue == '') {
+        setErrorFor(nameimp, "Por favor, digite o seu nome!");
+    } else if (!checkName(nameimpValue)) {
+        setErrorFor(nameimp, "Digite o seu nome e apelido.");
+    } else {
+        setSuccessFor(nameimp);
+    }
+}
+function checkName(nameimp) {
+    return /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*$/i.test(nameimp)
+}
+
+//function para validar email
+email.addEventListener('input', (e) => {
+    e.preventDefault();
+    checkEmailImp();
+});
+
+function checkEmailImp() {
+    const emailValue = email.value;
+
+    if (emailValue == '') {
+        setErrorFor(email, "O email é obrigatório");
+    } else if (!checkEmail(emailValue)) {
+        setErrorFor(email, "Por favor, insira um email válido");
+    }else {
+        setSuccessFor(email);
+    }
+}
+
+function checkEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+//function para validar textarea
+msg.addEventListener('input', (e) => {
+    e.preventDefault();
+    checkMsgImp();
+});
+
+function checkMsgImp() {
+    const msgValue = msg.value;
+
+    if (msgValue == '') {
+        setErrorFor(msg, "Por favor, digite a sua mensagem!")
+    } else if (!checkMsg(msgValue)) {
+        setErrorFor(msg, 'Digite a sua mensagem com mais detalhes.');
+    }else {
+        setSuccessFor(msg);
+    } 
+}
+
+function checkMsg(msg) {
+    return (form.msg.value.length >= 200);
+    console.log(checkMsg);
+}
 
 var textArea = document.querySelector('textarea');
 textArea.addEventListener('input', function(){
@@ -17,46 +77,8 @@ var digitando = textArea.value.length;
     console.log();
 });
 
-function checkInputs() {
-    const nameimpValue = nameimp.value;
-    const emailValue = email.value;
-    const msgValue = msg.value;
-    
 
-    if (nameimpValue == '') {
-        setErrorFor(nameimp, "Por favor, digite o seu nome!");
-    } else if (!checkName(nameimpValue)) {
-        setErrorFor(nameimp, "Digite o seu nome e apelido.");
-    } else {
-        setSuccessFor(nameimp);
-    }
-
-    if (emailValue == '') {
-        setErrorFor(email, "O email é obrigatório");
-    } else if (!checkEmail(emailValue)) {
-        setErrorFor(email, "Por favor, insira um email válido");
-    }else {
-        setSuccessFor(email);
-    }
-
-    if (msgValue == '') {
-        setErrorFor(msg, "Por favor, digite a sua mensagem!")
-    } else if (!checkMsg(msgValue)) {
-        setErrorFor(msg, '');
-    }else {
-        setSuccessFor(msg);
-    } 
-
-    const formControls = form.querySelectorAll('.form-control');
-    const formIsValid = [...formControls].every((formControl) => {
-        return (formControl.className === "form-control sucess");
-    });
-
-    if (formIsValid) {
-        window.alert("O formulário está 100% válido");
-    }
-}
-
+//function para mostrar o erro
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector("small");
@@ -71,17 +93,3 @@ function setSuccessFor(input) {
     // adicionar a classe do sucesso
     formControl.className = "form-control success";
 }
-
-function checkEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
-function checkName(nameimp) {
-    return /^[a-z\d_]{5,50}$/i.test(nameimp);
-}
-
- //contador de palavras 
- function checkMsg(checkMsg) {
-    return (form.msg.value.length >= 200);
-}
-

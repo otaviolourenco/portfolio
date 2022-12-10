@@ -22,7 +22,7 @@
   </head>
   <body>
     <!--Início do header / menu-->
-    <header class="position-relative">
+    <header class="position-relative" style="height: 100%;">
       <div class="container">
       <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top" id="nav-bg">
         <div class="container-fluid">
@@ -189,7 +189,7 @@
       </div>
     </div>
     <!--container portfolio starts-->
-    <div class="container mb-5">
+    <div class="container mb-4">
       <div class="row pb-5">
         <h2>
           Portfolio
@@ -197,39 +197,43 @@
       </div>
       <!--cards portfolio-->
       <div class="row">
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-dark">Card title</h5>
               <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary btn-color ">Go somewhere</a>
+              <a href="#" class="btn btn-primary btn-color">Go somewhere</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-dark">Card title</h5>
               <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary btn-color ">Go somewhere</a>
+              <a href="#" class="btn btn-primary btn-color">Go somewhere</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-dark">Card title</h5>
               <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary btn-color ">Go somewhere</a>
+              <a href="#" class="btn btn-primary btn-color">Go somewhere</a>
             </div>
           </div>
         </div>
-        <div class="row d-flex justify-content-center my-1 p-4">
-          <button type="button" class="btn btn-primary w-25 p-3 bg-btn">Primary</button>
-        </div>
+      </div>
+    </div>
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 d-flex justify-content-center"><button type="button" class="btn btn-primary p-3 bg-btn" style="width: 286px;">Primary</button></div>
+        <div class="col-sm-4"></div>
       </div>
     </div>
       <!--container RSS-->
@@ -267,15 +271,18 @@
       <!--CTA banner-->
       <div class="container-fluid text-center cta-bg py-4 mb-4">
         <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4 px-3">
           <h2>Lorem ipsum dolor</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum eaque rem officia qui. Soluta quia fugiat explicabo necessitatibus, hic dolores! Porro fuga impedit, nihil veniam sunt est omnis delectus.</p>
+        </div>
         </div>
         <!--CTA buttons-->
         <div class="row">
           <div class="col-sm-4"></div>
-          <div class="col-sm-4 d-flex justify-content-evenly">
-            <button type="button" class="btn btn-primary" style="background-color: #0F172A; border: 0;">Primary</button>
-            <button type="button" class="btn btn-primary bg-btn">Primary</button>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary mx-2" style="background-color: #0F172A; border: 0;">Primary</button>
+            <button type="button" class="btn btn-primary bg-btn mx-2">Primary</button>
           </div>
           <div class="col-sm-4"></div>
         </div>
@@ -296,10 +303,10 @@
           </div>
           <!--form-->
           <div class="col-sm-6">
-            <form action="" id="form" class="form">
+            <form action="" name="form" id="form" class="form">
               <div class="form-control">
-                  <label for="username">Nome</label> 
-                  <input type="text" id="username" placeholder="Digite o seu nome">
+                  <label for="nameimp">Nome</label> 
+                  <input type="text" id="nameimp" placeholder="Digite o seu nome">
                   <i class="fa-solid fa-circle-exclamation"></i> <!--Icone error-->
                   <i class="fa-solid fa-circle-check"></i> <!--Icone sucess-->
                   <small>Mensagem de erro</small> <!--Msg de erro-->
@@ -314,14 +321,18 @@
               </div>
 
               <div class="form-control">
-              <label for="message">Mensagem</label> 
-                <textarea name="message" id="message" cols="20" rows="5" placeholder="Digite a sua mensagem"></textarea>
+              <label for="msg">Mensagem</label> 
+                <textarea name="msg" id="msg" cols="20" rows="5" placeholder="Digite a sua mensagem"></textarea>
+                  <div >
+                    <span id="counter">200</span><span>/200</span>
+                  </div>
+               
                     <i class="fa-solid fa-circle-exclamation"></i> <!--Icone error-->
                     <i class="fa-solid fa-circle-check"></i> <!--Icone sucess-->
                   <small>Mensagem de erro</small> <!--Msg de erro-->
              
+                </div>
                 <button type="submit" class="btn btn-primary  p-3 bg-btn">Contact me</button>
-              </div>
             </form>
           </div>
 
@@ -332,12 +343,14 @@
       <!--container footer-->
       <div class="container-fluid text-end">
         <hr style="color: azure;">
-        <p>Desenvolvido por Otávio Lourenço | Allrights reserved</p>
+        <p>Desenvolvido por Otávio Lourenço | Allrights reserved &copy;</p>
       </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script src="input.js"></script>
   </body>
 </html>
