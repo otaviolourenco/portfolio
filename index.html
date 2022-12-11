@@ -21,10 +21,10 @@
     <title>Document</title>
   </head>
   <body>
-    <!--Início do header / menu-->
-    <header class="position-relative" style="height: 100%;">
+    <!--Header / menu starts-->
+    <header class="position-relative">
       <div class="container">
-      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top" id="nav-bg">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Logo</a>
           <button
@@ -94,7 +94,7 @@
           </h4>
         </div>
         <!--Header image-->
-        <div class="col-sm-5 d-flex justify-content-center mt-5">
+        <div class="col-sm-5 d-flex justify-content-center mt-5" id="bg-shadow">
           <img src="image/man.png" alt="" id="hd-man" />
         </div>
       </div>
@@ -197,7 +197,7 @@
       </div>
       <!--cards portfolio-->
       <div class="row">
-        <div class="col-sm-4 text-center d-flex justify-content-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center mb-4">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -207,7 +207,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4 text-center d-flex justify-content-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center mb-4">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -217,7 +217,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4 text-center d-flex justify-content-center">
+        <div class="col-sm-4 text-center d-flex justify-content-center mb-4">
           <div class="card" style="width: 18rem;">
             <img src="image/html-logo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -241,21 +241,21 @@
         <div class="row">
           <div class="col-sm-6 d-flex flex-wrap">
             <div class="card d-flex flex-row mb-3" style="height: 14rem;">
-              <img src="image/html-logo.jpg" class="card-img-top" alt="...">
+              <img src="image/html-logo.jpg" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
 
             <div class="card d-flex flex-row mb-3" style="height: 14rem;">
-              <img src="image/html-logo.jpg" class="card-img-top" alt="...">
+              <img src="image/html-logo.jpg" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
 
             <div class="card d-flex flex-row mb-3" style="height: 14rem;">
-              <img src="image/html-logo.jpg" class="card-img-top" alt="...">
+              <img src="image/html-logo.jpg" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -281,7 +281,7 @@
         <div class="row">
           <div class="col-sm-4"></div>
           <div class="col-sm-4">
-            <button type="button" class="btn btn-primary mx-2" style="background-color: #0F172A; border: 0;">Primary</button>
+            <button type="button" class="btn btn-primary mx-2" style="background-color: var(--dark-blue); border: 0;">Primary</button>
             <button type="button" class="btn btn-primary bg-btn mx-2">Primary</button>
           </div>
           <div class="col-sm-4"></div>
@@ -342,8 +342,8 @@
       
       <!--container footer-->
       <div class="container-fluid text-end">
-        <hr style="color: azure;">
-        <p>Desenvolvido por Otávio Lourenço | Allrights reserved &copy;</p>
+        <hr style="color: var(--white);">
+        <p class="me-5">Desenvolvido por Otávio Lourenço | Allrights reserved &copy;</p>
       </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

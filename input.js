@@ -3,7 +3,7 @@ const nameimp = document.getElementById('nameimp');
 const email = document.getElementById('email');
 const msg = document.getElementById('msg');
 
-//function para validar nome
+//function to name validate
 nameimp.addEventListener('input', (e) => {
     e.preventDefault();
     checkNameImp();
