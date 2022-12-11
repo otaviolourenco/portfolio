@@ -4,17 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --dark-blue: #0F172A;
+    --light-blue: #0DC5EE;
+    --light-green:  #7EFDC0;
+    --white: #f0ffff;
+    --alert-ok: #3af89c;
+    --alert-error: #cc1717;
+}
+
 body {
-    background-color: #0F172A;
+    background-color: var(--dark-blue);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    color: azure;
-}
-
-#nav-bg {
-    background-color: #0F172A;
+    color: var(--white);
 }
 
 .hd-txt {
@@ -25,8 +30,13 @@ h1, h2, h3, h4, h5, h6, p {
     height: 85vh;
 }
 
+#bg-shadow {
+    background: rgb(54,131,94);
+    background: radial-gradient(circle, rgba(54,131,94,1) 0%, rgba(33,117,77,1) 8%, rgba(15,23,42,1) 40%);
+}
+
 .progress-bar {
-    background-color: #0DC5EE;
+    background-color: var(--light-blue);
 }
 
 .custom-shape-divider-bottom-1670507124 {
@@ -47,47 +57,46 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .custom-shape-divider-bottom-1670507124 .shape-fill {
-    fill: #272d3c;
+    fill: #2b5e88;
 }
-
-
 
 .scl-txt{
     width: 100%;
     padding: 5px 0;
-    background-color: #0DC5EE;
+    background-color: var(--light-blue);
 }
 
 marquee {
     font-size: 26px;
-    color: #0F172A;
+    color: var(--dark-blue);
     text-transform: uppercase;
     word-spacing: 10px;
 }
 
 .cta-bg {
-    background-image: linear-gradient(90deg, #0DC5EE 0%, #7EFDC0 100%);
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
 }
 
 .bg-btn {
-    background-image: linear-gradient(90deg, #0DC5EE 0%, #7EFDC0 100%);
-    color: #0F172A;
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
+    color: var(--dark-blue);
 }
 
 .btn-color {
-    background: #0F172A;
-    color: azure;
+    background: var(--dark-blue);
+    color: var(--white);
     border: 0;
 }
 
 .btn-color:hover {
-    background-image: linear-gradient(90deg, #0DC5EE 0%, #7EFDC0 100%);
-    color: #0F172A;
-    border: solid 1px #0F172A;
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
+    color:var(--dark-blue);
+    border: solid 1px var(--dark-blue);
+    border: 0;
 }
 
 .social a{
-    color: azure;
+    color: var(--white);
 }
 
 .social i{
@@ -96,21 +105,20 @@ marquee {
 }
 
 .social i:hover {
-    color: #0DC5EE;
+    color: var(--light-blue);
 }
 
 .form {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .form-control {
     margin-bottom: 5px;
+    padding-bottom: 20px;
+    position: relative;
     background-color: #0f172a41;
-    color: azure;
-    border: solid 1px #0F172A;
+    color: var(--white);
+    border: solid 1px var(--dark-blue);
 }
 
 .form-control label {
@@ -119,7 +127,7 @@ marquee {
 }
 
 .form-control input {
-    border: 2px solid #f0f0f0;
+    border: 2px solid var(--white);
     display: block;
     border-radius: 10px;
     font-size: 14px;
@@ -128,7 +136,7 @@ marquee {
 }
 
 .form-control textarea {
-    border: 2px solid #f0f0f0;
+    border: 2px solid var(--white);
     display: block;
     border-radius: 10px;
     font-size: 14px;
@@ -150,6 +158,10 @@ marquee {
     visibility: hidden;
 }
 
+.form-control span {
+    visibility: hidden;
+}
+
 .form button {
     font-size: 18px;
     width: 100%;
@@ -159,24 +171,39 @@ marquee {
 
 /* error and success*/
 .form-control.success input {
-    border-color: #2ecc71;
+    border-color: var(--alert-ok);
 }
 
 .form-control.error input {
-    border-color: #e00000;
+    border-color: var(--alert-error);
+}
+
+.form-control.success textarea {
+    border-color: var(--alert-ok);
+}
+
+.form-control.error textarea {
+    border-color: var(--alert-error);
 }
 
 .form-control.success i.fa-circle-check {
-    color: #2ecc71;
+    color: var(--alert-ok);
     visibility: visible;
 }
 
 .form-control.error i.fa-circle-exclamation {
-    color: #e00000;
+    color: var(--alert-error);
     visibility: visible;
 }
 
 .form-control.error small {
     visibility: visible;
-    color: #e00000;
+    color: var(--alert-error);
 }
+
+.form-control.error span {
+    visibility: visible;
+    color: var(--alert-error);
+}
+
+
