@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #0F172A;
+    --light-blue: #0DC5EE;
+    --light-green:  #7EFDC0;
+    --white: #f0ffff;
+    --alert-ok: #3af89c;
+    --alert-error: #cc1717;
+}
+
+body {
+    background-color: var(--dark-blue);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--white);
+}
+
+.hd-txt {
+    padding: 10% 5% 10% 15%; 
+}
+
+#hd-man {
+    height: 85vh;
+}
+
+#bg-shadow {
+    background: rgb(54,131,94);
+    background: radial-gradient(circle, rgba(54,131,94,1) 0%, rgba(33,117,77,1) 10%, rgba(15,23,42,1) 40%);
+}
+
+.progress-bar {
+    background-color: var(--light-blue);
+}
+
+.custom-shape-divider-bottom-1670507124 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1670507124 svg {
+    position: relative;
+    display: block;
+    width: calc(126% + 1.3px);
+    height: 79px;
+}
+
+.custom-shape-divider-bottom-1670507124 .shape-fill {
+    fill: #2b5e88;
+}
+
+.scl-txt{
+    width: 100%;
+    padding: 5px 0;
+    background-color: var(--light-blue);
+}
+
+marquee {
+    font-size: 26px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+.cta-bg {
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
+}
+
+.bg-btn {
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
+    color: var(--dark-blue);
+}
+
+.btn-color {
+    background: var(--dark-blue);
+    color: var(--white);
+    border: 0;
+}
+
+.btn-color:hover {
+    background-image: linear-gradient(90deg, var(--light-blue) 0%, var(--light-green) 100%);
+    color:var(--dark-blue);
+    border: solid 1px var(--dark-blue);
+    border: 0;
+}
+
+.social a{
+    color: var(--white);
+}
+
+.social i{
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+.social i:hover {
+    color: var(--light-blue);
+}
+
+.form {
+    padding: 20px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #0f172a41;
+    color: var(--white);
+    border: solid 1px var(--dark-blue);
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid var(--white);
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control textarea {
+    border: 2px solid var(--white);
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control i {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control span {
+    visibility: hidden;
+}
+
+.form button {
+    font-size: 18px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* error and success*/
+.form-control.success input {
+    border-color: var(--alert-ok);
+}
+
+.form-control.error input {
+    border-color: var(--alert-error);
+}
+
+.form-control.success textarea {
+    border-color: var(--alert-ok);
+}
+
+.form-control.error textarea {
+    border-color: var(--alert-error);
+}
+
+.form-control.success i.fa-circle-check {
+    color: var(--alert-ok);
+    visibility: visible;
+}
+
+.form-control.error i.fa-circle-exclamation {
+    color: var(--alert-error);
+    visibility: visible;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: var(--alert-error);
+}
+
+.form-control.error span {
+    visibility: visible;
+    color: var(--alert-error);
+}
+
+
