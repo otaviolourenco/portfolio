@@ -30,15 +30,6 @@ h1, h2, h3, h4, h5, h6, p {
     height: 85vh;
 }
 
-#bg-shadow {
-    background: rgb(54,131,94);
-    background: radial-gradient(circle, rgba(54,131,94,1) 0%, rgba(33,117,77,1) 10%, rgba(15,23,42,1) 40%);
-}
-
-.progress-bar {
-    background-color: var(--light-blue);
-}
-
 .custom-shape-divider-bottom-1670507124 {
     position: absolute;
     bottom: 0;
@@ -71,6 +62,27 @@ marquee {
     color: var(--dark-blue);
     text-transform: uppercase;
     word-spacing: 10px;
+}
+
+#abt-man {
+    height: 300px;
+    border-radius: 120px 33px 120px 33px;
+    -webkit-border-radius: 120px 33px 120px 33px;
+    -moz-border-radius: 120px 33px 120px 33px;
+    transform: rotate(-7deg);
+}
+
+#box-abt {
+    height: 300px;
+    background: #2b5e88;
+    border-radius: 100px 33px 90px 40px;
+    -webkit-border-radius: 100px 33px 90px 40px;
+    -moz-border-radius: 100px 33px 90px 40px;
+    transform: rotate(7deg);
+}
+
+.progress-bar {
+    background-color: var(--light-blue);
 }
 
 .cta-bg {
@@ -108,12 +120,7 @@ marquee {
     color: var(--light-blue);
 }
 
-.form {
-    padding: 20px;
-}
-
 .form-control {
-    margin-bottom: 5px;
     padding-bottom: 20px;
     position: relative;
     background-color: #0f172a41;
@@ -199,6 +206,7 @@ marquee {
 .form-control.error small {
     visibility: visible;
     color: var(--alert-error);
+    font-weight: bold;
 }
 
 .form-control.error span {

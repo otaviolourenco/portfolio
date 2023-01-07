@@ -13,68 +13,44 @@
 
     <link rel="stylesheet" href="CSS/style.css" />
 
-    <title>Document</title>
+    <title>My Portfolio</title>
   </head>
   <body>
     <!--Header / menu starts-->
     <header class="position-relative">
-      <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success bg-btn" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark px-3">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="image/logo.png" alt="My logo" height="50" class="d-inline-block align-text-top rounded-circle">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link active d-flex justify-content-center" aria-current="page" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-center" href="#shows-menu">Sobre</a>
+                </li>
+                <li class="nav-item dropdown pe-2">
+                  <a class="nav-link dropdown-toggle d-flex justify-content-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Portfolio
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item d-flex justify-content-center" href="#">Websites</a></li>
+                    <li><a class="dropdown-item d-flex justify-content-center" href="#">Aplicações</a></li>
+                    <li><a class="dropdown-item d-flex justify-content-center" href="#">E-commerce</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2 p-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn bg-btn" type="submit">Pesquisar</button>
+              </form>
+            </div>
+        </nav>
       <!--Header text-->
       <div class="row d-flex flex-row">
         <div class="col-sm-7 hd-txt mt-5">
@@ -89,7 +65,7 @@
           </h4>
         </div>
         <!--Header image-->
-        <div class="col-sm-5 d-flex justify-content-center mt-5" id="bg-shadow">
+        <div class="col-sm-5 d-flex justify-content-center mt-5">
           <img src="image/man.png" alt="" id="hd-man" />
         </div>
       </div>
@@ -126,10 +102,23 @@
       </marquee>
     </div>
     <!--container about starts-->
-    <div class="container mb-5">
-      <div class="row">
-        <div class="col-sm-6"></div>
-        <div class="col-sm-6 p-5" style="color: azure">
+    <div class="container my-5">
+      <div class="row d-flex align-items-center">
+        <div class="col-sm-7 p-5">
+          <div div class="flex-column d-flex align-items-center">
+              <div id="box-abt">
+                <img src="image/man4.jpg" alt="" id="abt-man">
+              </div>
+          </div>
+        </div>
+
+        <div class="col-sm-1 d-flex align-items-center d-none d-sm-block">
+          <div class="d-flex" style="height: 300px;">
+            <div class="vr text-light"></div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" style="color: var(--white); ; margin-left: px;">
           <h2>About Me</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
@@ -184,8 +173,8 @@
       </div>
     </div>
     <!--container portfolio starts-->
-    <div class="container mb-4">
-      <div class="row pb-5">
+    <div class="container p-1 mb-4">
+      <div class="row ms-5 p-5">
         <h2>
           Portfolio
         </h2>
@@ -267,7 +256,7 @@
       <div class="container-fluid text-center cta-bg py-4 mb-4">
         <div class="row">
           <div class="col-sm-4"></div>
-          <div class="col-sm-4 px-3">
+          <div class="col-sm-4 px-1">
           <h2>Lorem ipsum dolor</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum eaque rem officia qui. Soluta quia fugiat explicabo necessitatibus, hic dolores! Porro fuga impedit, nihil veniam sunt est omnis delectus.</p>
         </div>
@@ -286,7 +275,7 @@
       <div class="container">
         <div class="row d-flex align-items-center">
           <!--text form-->
-          <div class="col-sm-6 p-5">
+          <div class="col-sm-7 p-5">
             <h2>Let's work together</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui ut alias dolorum tempora, at tenetur a repellendus voluptatibus voluptas reiciendis neque cumque beatae, error ullam. Nihil obcaecati recusandae optio.</p>
             <div class="social mt-4">
@@ -297,7 +286,7 @@
             </div>
           </div>
           <!--form-->
-          <div class="col-sm-6">
+          <div class="col-sm-5 p-5">
             <form action="" name="form" id="form" class="form">
               <div class="form-control">
                   <label for="nameimp">Nome</label> 
@@ -336,9 +325,9 @@
       
       
       <!--container footer-->
-      <div class="container-fluid text-end">
+      <div class="container-fluid text-center">
         <hr style="color: var(--white);">
-        <p class="me-5">Desenvolvido por Otávio Lourenço | Allrights reserved &copy;</p>
+        <p class="me-5">Copyright &copy; 2022. Desenvolvido por Otávio Lourenço. All rights reserved.</p>
       </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
